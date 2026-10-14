@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 660" fill="none">
+  <defs>
+    <linearGradient id="bun" x1="348" y1="116" x2="351" y2="310" gradientUnits="userSpaceOnUse"><stop stop-color="#ffdd92"/><stop offset=".3" stop-color="#eaa94d"/><stop offset=".75" stop-color="#bf6d29"/><stop offset="1" stop-color="#85451e"/></linearGradient>
+    <linearGradient id="bunBottom" x1="356" y1="433" x2="356" y2="550" gradientUnits="userSpaceOnUse"><stop stop-color="#cd7d31"/><stop offset=".4" stop-color="#f2b453"/><stop offset=".8" stop-color="#d78c35"/><stop offset="1" stop-color="#85471d"/></linearGradient>
+    <linearGradient id="meat" x1="354" y1="335" x2="356" y2="422" gradientUnits="userSpaceOnUse"><stop stop-color="#52311f"/><stop offset=".4" stop-color="#8f492c"/><stop offset=".65" stop-color="#4a291a"/><stop offset="1" stop-color="#211810"/></linearGradient>
+    <linearGradient id="cheese" x1="336" y1="290" x2="382" y2="438" gradientUnits="userSpaceOnUse"><stop stop-color="#ffe061"/><stop offset=".45" stop-color="#ffb72b"/><stop offset="1" stop-color="#e27a10"/></linearGradient>
+    <linearGradient id="sauce" x1="341" y1="263" x2="346" y2="325" gradientUnits="userSpaceOnUse"><stop stop-color="#fbc474"/><stop offset="1" stop-color="#d87d38"/></linearGradient>
+    <radialGradient id="shine"><stop stop-color="#fff4b8" stop-opacity=".65"/><stop offset="1" stop-color="#fff4b8" stop-opacity="0"/></radialGradient>
+    <filter id="texture" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".065" numOctaves="3" seed="9" result="noise"/><feColorMatrix in="noise" type="saturate" values="0"/><feComposite in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+    <filter id="meatTexture" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".14" numOctaves="3" seed="3" result="noise"/><feColorMatrix in="noise" type="saturate" values="0"/><feComposite in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <filter id="shadow"><feGaussianBlur stdDeviation="17"/></filter>
+  </defs>
+  <ellipse cx="356" cy="563" rx="227" ry="23" fill="#000" opacity=".45" filter="url(#shadow)"/>
+  <path d="M124 462c12-15 91-28 226-29s223 10 242 29c2 18-14 56-38 69-47 25-117 33-204 29-103 0-175-10-203-34-18-16-25-40-23-64Z" fill="url(#bunBottom)" filter="url(#texture)"/>
+  <path d="M137 498c57 25 153 27 220 28 95 2 171-7 219-28" stroke="#ffd890" stroke-width="5" opacity=".35" stroke-linecap="round"/>
+  <path d="M123 461c35-14 103-23 236-22 100 0 188 8 225 24-46 23-159 35-235 34-96-2-188-17-226-36Z" fill="#f5c074"/>
+  <path d="M120 439c13-9 38-7 59-13 14-5 26-2 39 2 14-11 34-10 49-8 37-7 64-4 91 0 36-12 71-3 92-3 29-5 53-6 72 1 16-7 36-2 48 6 25-3 40 1 44 16 4 13-3 27-19 30-11 3-22 0-32 4-17 3-31-3-44 1-19 5-39 1-57 2-28 7-49 2-68 4-38 3-60-2-85-3-16 6-37 3-53-2-30 2-46-7-66-8-16 5-30-6-39-6-24 0-40-7-42-23Z" fill="url(#meat)" filter="url(#meatTexture)"/>
+  <path d="m155 436 26 5 22-8 21 8 23-5 31 8 24-5 30 8 27-7 21 5 24-7 25 6 22-8 23 3 25-7 19 6 17-4" stroke="#ba7042" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+  <path d="M127 404c65-11 130-20 228-17 76-4 175 3 243 16l-40 22-49-4-37 52c-7 10-18 7-21-3l-14-35-71 12-23-14-45 24c-10 6-19 4-25-5l-19-27-65 6-62-27Z" fill="url(#cheese)"/>
+  <path d="M147 405c80 1 147 11 206 6 83-7 176-1 221-4" stroke="#ffeab0" stroke-width="5" opacity=".5"/>
+  <path d="M113 365c10-12 27-12 47-14 24-7 43-4 64-5 28-9 53-2 77-6 29-8 53-3 81-2 34-5 58-2 87 1 27-4 54 0 77 10 23-2 45 8 59 16 16 4 22 18 14 30-4 13-21 13-40 20-11 5-30 1-42 4-27 8-48 2-69 7-25 6-53 3-77 3-27 4-58-1-88-1-32 6-60-4-85-3-22 2-40-7-63-8-19 4-42-6-52-14-20-6-18-26-13-38Z" fill="url(#meat)" filter="url(#meatTexture)"/>
+  <g stroke-linecap="round" opacity=".8"><path d="m139 376 10 3m15-9 14 3m17 19 13-1m12-23 16 4m16 21 8-2m20-19 15 3m7 24 11-4m19-22 8 4m24-8 12 4m16 23 11-3m17-19 11 1m20 18 13-2m13-22 10 3m22 12 11-2m15-9 10 4" stroke="#c38753" stroke-width="5"/><path d="m154 395 17 7m53-18 12 5m30-23 12 6m71 32 11 3m38-25 19-5m44 21 14 3m46-18 17 5m-331-18 13-6m75 16 14-5m46 24 13-4m84-22 11-6" stroke="#23170f" stroke-width="6"/></g>
+  <path d="M113 327c35-13 124-21 236-21 94 0 210 3 267 19l-35 15-32-2-42 50c-9 12-25 9-29-5l-11-27-58 14-39-10-64 39c-10 6-23 4-28-7l-12-28-58 8-32-13-37 5-31-37Z" fill="url(#cheese)"/>
+  <path d="M149 329c72-9 155-6 212-5 91-1 172-2 224 5" stroke="#fff1ae" stroke-width="6" opacity=".6"/>
+  <path d="M124 292c51-15 129-26 237-23s187 8 229 28c5 11-4 24-24 28-23 4-45-1-69-1-22 1-42-2-66 1-29 3-53-2-80 0-29 2-56-3-82-4-33 4-61-4-87-7-30 1-68-5-58-22Z" fill="url(#sauce)"/>
+  <path d="M152 305c31-6 41 1 49 17 8 15 17 12 20-1 2-11 11-12 20-12m187 5c13-9 27-1 28 12 1 11 12 14 15 2 4-14 16-13 28-8" stroke="#f9c27b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M111 266c8-57 54-115 114-136 59-20 118-28 187-18 106 8 178 63 196 125 5 17 11 39-2 51-23 17-121 25-246 23-133-2-216-8-238-20-9-7-13-16-11-25Z" fill="url(#bun)" filter="url(#texture)"/>
+  <ellipse cx="308" cy="171" rx="132" ry="55" fill="url(#shine)" transform="rotate(-10 308 171)"/>
+  <path d="M127 281c87 25 312 36 462-1" stroke="#e8a453" stroke-width="6" opacity=".6" stroke-linecap="round"/>
+  <g fill="#fff0bb" stroke="#be8139" stroke-width="1.2">
+    <ellipse cx="187" cy="219" rx="3.5" ry="8" transform="rotate(40 187 219)"/><ellipse cx="239" cy="169" rx="3.5" ry="8" transform="rotate(-32 239 169)"/><ellipse cx="300" cy="148" rx="3" ry="7" transform="rotate(55 300 148)"/><ellipse cx="356" cy="176" rx="3.5" ry="8" transform="rotate(-10 356 176)"/><ellipse cx="417" cy="146" rx="3.5" ry="7" transform="rotate(40 417 146)"/><ellipse cx="467" cy="184" rx="3.5" ry="8" transform="rotate(-50 467 184)"/><ellipse cx="521" cy="208" rx="3.5" ry="8" transform="rotate(-32 521 208)"/><ellipse cx="281" cy="218" rx="3.5" ry="8" transform="rotate(40 281 218)"/><ellipse cx="382" cy="230" rx="3.5" ry="8" transform="rotate(25 382 230)"/><ellipse cx="436" cy="214" rx="3.5" ry="8" transform="rotate(-35 436 214)"/><ellipse cx="233" cy="249" rx="3.5" ry="8" transform="rotate(-40 233 249)"/><ellipse cx="329" cy="253" rx="3.5" ry="8" transform="rotate(60 329 253)"/><ellipse cx="472" cy="260" rx="3.5" ry="8" transform="rotate(15 472 260)"/><ellipse cx="555" cy="253" rx="3.5" ry="8" transform="rotate(-35 555 253)"/>
+  </g>
+</svg>
