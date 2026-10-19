@@ -12,7 +12,7 @@ La versión técnica funciona y tiene pruebas de navegador. **No es una publicac
 
 Los enlaces y el nombre proceden del propietario. El entorno ha denegado la lectura de Instagram, Google Maps y las plataformas con `403 Domain forbidden`. Por ello:
 
-- La identidad tipográfica y los colores son una propuesta, no el logo ni la estética oficial extraídos de Instagram.
+- La paleta negro, blanco y rojo sigue la indicación del propietario. La identidad tipográfica sigue siendo provisional; no es el logo extraído de Instagram.
 - La hamburguesa es una ilustración original, indicada como tal; no es una foto del negocio. El plano es decorativo y no sirve como mapa geográfico.
 - No se han inventado productos, precios, ingredientes, alérgenos, dirección, teléfono, horarios ni reseñas.
 - La sección de carta enlaza las plataformas. Los pedidos y pagos se tramitan fuera de la web; no hay carrito ni cobro propio.
@@ -56,8 +56,26 @@ npx playwright install --with-deps chromium
 - `src/main.ts`: navegación y modales; no realiza pedidos ni procesa pagos.
 - `src/style.css` y `src/responsive.css`: identidad propuesta y adaptación de pantalla.
 - `public/images/burger-illustration.svg`: ilustración original provisional.
+- `src/reviews-template.ts`, `src/reviews.ts` y `src/reviews.css`: apartado de Google Maps y carrusel accesible.
+- `public/data/google-reviews.json`: datos de reseñas confirmados; actualmente vacío porque la fuente continúa bloqueada.
 
 Para incorporar la carta, usa productos, precios e información de alérgenos confirmados por el negocio, con fecha de actualización. Sustituye la ilustración y la marca tipográfica por los recursos oficiales cuando estén disponibles y autorizados. Añade el aviso legal con la información real del titular y revisa la privacidad según el alojamiento elegido. Los campos `legalName` y `taxId` todavía no generan un aviso legal; hay que redactarlo e incorporarlo cuando el titular lo confirme.
+
+### Reseñas de Google Maps
+
+El carrusel muestra una reseña cada siete segundos mientras está en pantalla. Tiene anterior, siguiente y pausa; se detiene al pasar el puntero, al entrar el foco de teclado, al ocultar la pestaña y al salir de pantalla. Tras usar el teclado o cambiar una reseña manualmente, solo reanuda con el control explícito. Con movimiento reducido empieza pausado. Si hay una sola reseña, se ocultan los controles.
+
+La web lee un archivo JSON local, **no una conexión en directo ni una sincronización automática con Google**. Sin datos, mantiene una invitación y un enlace a la ficha real, sin citas ni valoraciones inventadas. El 19 de octubre de 2026 se volvió a comprobar el acceso a todas las fuentes: el proxy continúa devolviendo `403 Forbidden`. Los dominios figuran en el borrador de configuración, pero no están activos en la política de red de la máquina actual.
+
+Para añadir contenido verificado, actualiza `public/data/google-reviews.json` y vuelve a desplegar:
+
+- Conserva `source: "google_maps"` y la URL real de la ficha en `sourceUrl`.
+- `retrievedAt` debe indicar la fecha real de consulta en formato ISO. Es obligatorio para mostrar citas o cifras.
+- `rating` y `reviewCount` son la valoración global y el número de valoraciones comprobados en Google; no se calculan a partir de una selección de testimonios. Usa `null` si no están confirmados.
+- Cada elemento de `reviews` necesita `id` único, `author`, `text` íntegro, `rating` entero de 1 a 5 y `sourceUrl`. Puede incluir `authorUrl` para atribuir el perfil y `publishedAt` en formato `AAAA-MM-DD` si la fecha es conocida.
+- Mantén la atribución y el acceso a la fuente. No añadas una traducción como si fuera el texto original ni inventes fechas, autores o estrellas. El componente no filtra por puntuación.
+
+El texto se inserta con `textContent`; las URLs se validan contra los dominios HTTPS de Google. Si el archivo falta, contiene datos inválidos o tarda demasiado, se conserva el enlace a Google Maps. Los testimonios sintéticos de las pruebas se inyectan por Playwright y no forman parte del archivo publicado.
 
 ## Publicación
 
@@ -90,3 +108,5 @@ Vercel y Netlify aplican las cabeceras indicadas; GitHub Pages no permite config
 ## Versiones
 
 `main` conserva la base estable; `feat/ranxo-website-v1` conserva el desarrollo inicial. La versión validada se conserva también en `release/ranxo-v1` y en la etiqueta `v1.0.0`. No se borran ramas ni se fuerzan subidas.
+
+La paleta negro/blanco/rojo y el carrusel se conservan en `feat/red-brand-google-reviews`, `release/ranxo-v1.1` y `v1.1.0`. Los recursos oficiales y las reseñas reales siguen pendientes de acceso a las fuentes.

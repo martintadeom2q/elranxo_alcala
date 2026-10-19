@@ -1,11 +1,12 @@
 @import "./responsive.css";
 
 :root {
-  --ink: #171713;
-  --paper: #f6f2e9;
-  --yellow: #f6c445;
-  --muted: #706f65;
-  --line: #d9d5cb;
+  --ink: #101010;
+  --paper: #ffffff;
+  --red: #d7192b;
+  --red-light: #ff4652;
+  --muted: #626262;
+  --line: #dedede;
   --display: "Barlow Condensed", Impact, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
   color: var(--ink);
@@ -68,7 +69,7 @@ h2 {
 button:focus-visible,
 a:focus-visible,
 summary:focus-visible {
-  outline: 3px solid #c4681b;
+  outline: 3px solid currentColor;
   outline-offset: 5px;
 }
 button:disabled {
@@ -78,8 +79,8 @@ button:disabled {
   display: none !important;
 }
 ::selection {
-  background: var(--yellow);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--paper);
 }
 .container {
   width: min(1240px, calc(100% - 96px));
@@ -89,7 +90,8 @@ button:disabled {
   position: fixed;
   top: -80px;
   left: 16px;
-  background: var(--yellow);
+  background: var(--red);
+  color: var(--paper);
   padding: 12px 20px;
   z-index: 100;
 }
@@ -98,7 +100,8 @@ button:disabled {
 }
 .announcement {
   height: 34px;
-  background: var(--yellow);
+  background: var(--red);
+  color: var(--paper);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,14 +209,14 @@ button:disabled {
   color: var(--paper);
 }
 .button-dark:hover {
-  background: #33322a;
+  background: #292929;
 }
-.button-yellow {
-  background: var(--yellow);
-  color: var(--ink);
+.button-red {
+  background: var(--red);
+  color: var(--paper);
 }
-.button-yellow:hover {
-  background: #ffda67;
+.button-red:hover {
+  background: #b91021;
 }
 .header-order {
   min-height: 46px;
@@ -249,7 +252,7 @@ button:disabled {
 }
 .tiny-star {
   font-size: 20px;
-  color: var(--yellow);
+  color: var(--red);
   line-height: 1;
 }
 .hero h1 {
@@ -261,11 +264,11 @@ button:disabled {
   z-index: 2;
 }
 .hero h1 > span {
-  color: var(--yellow);
+  color: var(--red-light);
   white-space: nowrap;
 }
 .hero-copy > p {
-  color: #b8b8ae;
+  color: #b8b8b8;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -293,7 +296,7 @@ button:disabled {
   width: 20px;
 }
 .text-link:hover {
-  color: var(--yellow);
+  color: var(--red);
 }
 .hero-platforms {
   margin-top: 42px;
@@ -301,7 +304,7 @@ button:disabled {
 .hero-platforms > span {
   font-size: 8px;
   letter-spacing: 1.8px;
-  color: #aaa99f;
+  color: #aaaaaa;
 }
 .hero-platforms > div {
   display: flex;
@@ -312,13 +315,13 @@ button:disabled {
 .hero-platforms a {
   font-weight: 700;
   font-size: 16px;
-  color: #dad8cb;
+  color: #dedede;
 }
 .hero-platforms a:first-child {
   font-weight: 400;
 }
 .hero-platforms a:hover {
-  color: var(--yellow);
+  color: var(--red);
 }
 .hero-art {
   position: relative;
@@ -332,16 +335,16 @@ button:disabled {
   position: absolute;
   width: 490px;
   height: 490px;
-  border: 1px solid #77714755;
+  border: 1px solid #ffffff22;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, #7e54214d, transparent 70%);
+  background: radial-gradient(ellipse at center, #d7192b33, transparent 70%);
   transform: rotate(-12deg);
 }
 .burger-orbit:after {
   content: "";
   position: absolute;
   inset: -30px;
-  border: 1px dashed #77714744;
+  border: 1px dashed #ffffff18;
   border-radius: 50%;
 }
 .hero-burger {
@@ -361,21 +364,21 @@ button:disabled {
   font-family: var(--display);
   font-size: 17px;
   letter-spacing: 2px;
-  color: #d5cfb7;
+  color: #dddddd;
 }
 .art-note:after {
   content: "";
   display: block;
   width: 70px;
   height: 25px;
-  border-top: 2px solid var(--yellow);
+  border-top: 2px solid var(--red);
   border-radius: 50%;
   margin: 8px 0 0 52px;
   transform: rotate(-20deg);
 }
 .art-spark {
   position: absolute;
-  color: var(--yellow);
+  color: var(--red);
 }
 .spark-one {
   top: 115px;
@@ -401,10 +404,10 @@ button:disabled {
   bottom: 71px;
   width: 142px;
   height: 142px;
-  background: var(--yellow);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--paper);
   border-radius: 50%;
-  outline: 1px dashed var(--ink);
+  outline: 1px dashed var(--paper);
   outline-offset: -9px;
   display: flex;
   flex-direction: column;
@@ -430,7 +433,7 @@ button:disabled {
   bottom: 16px;
   left: 90px;
   font-size: 8px;
-  color: #969383;
+  color: #a0a0a0;
   letter-spacing: 3px;
 }
 .hero-scroll {
@@ -439,15 +442,16 @@ button:disabled {
   bottom: 22px;
   width: 28px;
   height: 28px;
-  border: 1px solid #777767;
+  border: 1px solid #767676;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: #d4d0c1;
+  color: #d4d4d4;
 }
 .ticker {
   overflow: hidden;
-  background: var(--yellow);
+  background: var(--red);
+  color: var(--paper);
   padding: 17px 0;
   border-block: 1px solid var(--ink);
 }
@@ -487,7 +491,7 @@ button:disabled {
   margin-bottom: 24px;
 }
 .dark-eyebrow {
-  color: #625d51;
+  color: #595959;
 }
 .outline-text {
   -webkit-text-stroke: 1px var(--ink);
@@ -511,7 +515,7 @@ button:disabled {
   flex-direction: column;
   min-height: 285px;
   border-radius: 4px;
-  background: #eee9dc;
+  background: #f7f7f7;
   transition:
     transform 0.25s,
     border-color 0.25s,
@@ -538,7 +542,7 @@ button:disabled {
   height: 35px;
   display: grid;
   place-items: center;
-  border: 1px solid #17171333;
+  border: 1px solid #10101033;
   border-radius: 50%;
 }
 .external-icon svg {
@@ -552,36 +556,36 @@ button:disabled {
   line-height: 1.2;
 }
 .uber {
-  background: #e4ece2;
+  background: #f5f5f5;
 }
 .uber .platform-logo {
   font-weight: 500;
 }
 .uber .platform-logo b {
-  color: #178645;
+  color: #101010;
   font-weight: 700;
 }
 .justeat {
-  background: #f5e5d7;
+  background: #f5f5f5;
 }
 .justeat .platform-logo {
-  color: #b94a0c;
+  color: #101010;
   font-style: italic;
 }
 .glovo {
-  background: #f5e8b7;
+  background: #f5f5f5;
 }
 .glovo .platform-logo {
-  color: #176451;
+  color: #101010;
 }
 .platform-description {
   font-size: 11px;
-  color: #5d594f;
+  color: #555555;
   margin: 17px 0 23px;
 }
 .platform-action {
   padding-top: 18px;
-  border-top: 1px solid #17171322;
+  border-top: 1px solid #10101022;
   font-size: 12px;
   font-weight: 700;
   display: flex;
@@ -606,7 +610,7 @@ button:disabled {
   line-height: 1;
 }
 .about-section {
-  background: #eae4d6;
+  background: #f3f3f3;
   padding: 80px 0;
 }
 .about-grid {
@@ -616,11 +620,12 @@ button:disabled {
   align-items: center;
 }
 .about-poster {
-  background: var(--yellow);
+  background: var(--red);
+  color: var(--paper);
   padding: 24px 30px 25px;
   transform: rotate(-3deg);
-  box-shadow: 9px 9px 0 #17171313;
-  border: 1px solid #e0b041;
+  box-shadow: 9px 9px 0 #10101013;
+  border: 1px solid #d7192b;
   position: relative;
 }
 .poster-top {
@@ -630,7 +635,7 @@ button:disabled {
   font-size: 9px;
   letter-spacing: 2px;
   font-weight: 700;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--paper);
   padding-bottom: 15px;
 }
 .poster-top svg {
@@ -646,14 +651,14 @@ button:disabled {
   padding: 33px 0;
 }
 .poster-title > span {
-  -webkit-text-stroke: 1.3px var(--ink);
+  -webkit-text-stroke: 1.3px var(--paper);
   color: transparent;
 }
 .poster-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--paper);
   padding-top: 15px;
   font-size: 8px;
   letter-spacing: 1.2px;
@@ -677,7 +682,7 @@ button:disabled {
   bottom: -7px;
   left: 0;
   right: 0;
-  background: var(--yellow);
+  background: var(--red);
   transform: rotate(-3deg);
 }
 .about-lead {
@@ -690,7 +695,7 @@ button:disabled {
 .about-copy > p {
   font-size: 13px;
   line-height: 1.9;
-  color: #686256;
+  color: #595959;
   margin-bottom: 14px;
   max-width: 390px;
 }
@@ -708,7 +713,7 @@ button:disabled {
   color: var(--ink);
 }
 .dark-link:hover {
-  color: #9f5508;
+  color: #b91021;
 }
 .steps {
   display: grid;
@@ -725,7 +730,7 @@ button:disabled {
   font-family: var(--display);
   font-size: 45px;
   font-weight: 700;
-  color: #827a66;
+  color: #777777;
   line-height: 1;
 }
 .steps h3 {
@@ -754,13 +759,13 @@ button:disabled {
   font-size: clamp(62px, 6.3vw, 86px);
 }
 .location-copy h2 span {
-  color: var(--yellow);
+  color: var(--red-light);
 }
 .location-copy > p {
   font-size: 13px;
   line-height: 1.9;
   max-width: 340px;
-  color: #b5b1a4;
+  color: #b8b8b8;
 }
 .location-details {
   display: flex;
@@ -768,7 +773,7 @@ button:disabled {
   gap: 8px;
   margin: 25px 0 30px;
   font-size: 12px;
-  color: #d2cdbf;
+  color: #d2d2d2;
 }
 .location-details > span {
   display: flex;
@@ -778,14 +783,14 @@ button:disabled {
 .location-details svg {
   width: 19px;
   height: 19px;
-  color: var(--yellow);
+  color: var(--red);
 }
 .map-card {
   display: block;
-  background: #e8e2d5;
+  background: #eeeeee;
   border-radius: 5px;
   overflow: hidden;
-  border: 1px solid #514e3d;
+  border: 1px solid #444444;
   transform: rotate(2deg);
   transition: transform 0.25s;
 }
@@ -796,17 +801,17 @@ button:disabled {
   position: relative;
   height: 360px;
   overflow: hidden;
-  background: #dedbca;
+  background: #e5e5e5;
   background-image:
-    linear-gradient(#c9c6b552 1px, transparent 1px),
-    linear-gradient(90deg, #c9c6b552 1px, transparent 1px);
+    linear-gradient(#bcbcbc52 1px, transparent 1px),
+    linear-gradient(90deg, #bcbcbc52 1px, transparent 1px);
   background-size: 26px 26px;
 }
 .map-road {
   position: absolute;
   height: 16px;
-  background: #f6f2e9;
-  box-shadow: 0 0 0 1px #c8c3b1;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #cccccc;
   width: 150%;
   left: -25%;
   transform-origin: center;
@@ -832,8 +837,8 @@ button:disabled {
 }
 .map-block {
   position: absolute;
-  background: #c6bfa9;
-  border: 3px solid #d4cdbc;
+  background: #c6c6c6;
+  border: 3px solid #d4d4d4;
   border-radius: 6px;
   transform: rotate(-32deg);
   width: 80px;
@@ -862,9 +867,9 @@ button:disabled {
   top: 24px;
   width: 110px;
   height: 105px;
-  background: #b9c4a5;
+  background: #c6c6c6;
   transform: rotate(21deg);
-  border: 5px solid #cad0b8;
+  border: 5px solid #dadada;
   border-radius: 25px 6px 20px 10px;
 }
 .map-marker {
@@ -880,12 +885,12 @@ button:disabled {
 .map-marker > svg {
   width: 65px;
   height: 65px;
-  color: var(--yellow);
+  color: var(--red);
   filter: drop-shadow(2px 3px 0 var(--ink));
 }
 .map-marker > span {
   background: var(--ink);
-  color: var(--yellow);
+  color: var(--red);
   padding: 7px 14px;
   font-family: var(--display);
   font-size: 26px;
@@ -899,7 +904,7 @@ button:disabled {
   top: 240px;
   font-size: 10px;
   letter-spacing: 3px;
-  color: #726d5b;
+  color: #626262;
   font-weight: 700;
   line-height: 1.6;
   transform: rotate(-2deg);
@@ -974,7 +979,8 @@ button:disabled {
   text-underline-offset: 3px;
 }
 .social-section {
-  background: var(--yellow);
+  background: var(--red);
+  color: var(--paper);
   padding: 45px 0;
 }
 .social-inner {
@@ -993,12 +999,12 @@ button:disabled {
 }
 .social-inner .eyebrow {
   font-size: 9px;
-  color: #514a36;
+  color: #ffffff;
 }
 .social-circle {
   width: 90px;
   height: 90px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--paper);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1015,8 +1021,8 @@ button:disabled {
   height: 18px;
 }
 .social-circle:hover {
-  background: var(--ink);
-  color: var(--yellow);
+  background: var(--paper);
+  color: var(--red);
 }
 .final-cta {
   background: var(--ink);
@@ -1031,7 +1037,7 @@ button:disabled {
 }
 .final-cta .eyebrow {
   justify-content: center;
-  color: #b8b19a;
+  color: #bbbbbb;
   font-size: 9px;
 }
 .final-cta h2 {
@@ -1039,7 +1045,7 @@ button:disabled {
   margin: 27px 0 31px;
 }
 .final-cta h2 > span {
-  color: var(--yellow);
+  color: var(--red-light);
 }
 .final-cta .button {
   min-width: 195px;
@@ -1048,7 +1054,7 @@ button:disabled {
   position: absolute;
   right: 45px;
   top: 45px;
-  color: var(--yellow);
+  color: var(--red);
   transform: rotate(15deg);
 }
 .cta-star svg {
@@ -1126,7 +1132,7 @@ dialog {
   box-shadow: 0 25px 100px #0005;
 }
 dialog::backdrop {
-  background: #171713c9;
+  background: #101010c9;
   backdrop-filter: blur(5px);
 }
 .dialog-inner {
@@ -1146,7 +1152,8 @@ dialog::backdrop {
   line-height: 1;
 }
 .close-dialog:hover {
-  background: var(--yellow);
+  background: var(--red);
+  color: var(--paper);
 }
 .dialog-inner > .eyebrow {
   font-size: 9px;
@@ -1166,7 +1173,7 @@ dialog::backdrop {
   margin: 25px 0;
 }
 .dialog-platform {
-  border: 1px solid #17171322;
+  border: 1px solid #10101022;
   padding: 18px 20px;
   display: flex;
   align-items: center;

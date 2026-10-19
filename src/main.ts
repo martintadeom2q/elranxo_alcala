@@ -4,6 +4,10 @@ import "@fontsource/dm-sans/latin-400.css";
 import "@fontsource/dm-sans/latin-500.css";
 import "@fontsource/dm-sans/latin-700.css";
 import "./style.css";
+import "./reviews.css";
+import { initReviews } from "./reviews";
+
+void initReviews();
 
 const menuToggle = document.querySelector<HTMLButtonElement>(".menu-toggle")!;
 const mobileNav = document.querySelector<HTMLElement>("#mobile-nav")!;
