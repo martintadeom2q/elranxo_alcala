@@ -17,7 +17,7 @@ export const business = {
       short: "Uber",
       url: "https://www.ubereats.com/es/store/el-ranxo-alcala-de-henares/mJNAHg0nURutJxW-drpqnw",
       description: "Consulta la carta y pide con Uber Eats.",
-      color: "#d7192b",
+      color: "#06c167",
     },
     {
       id: "justeat",
@@ -25,7 +25,7 @@ export const business = {
       short: "Just Eat",
       url: "https://www.just-eat.es/restaurants-elrancho-smashburger-alcaladehenares/menu",
       description: "Encuentra tu pedido en Just Eat.",
-      color: "#d7192b",
+      color: "#f36d28",
     },
     {
       id: "glovo",
@@ -33,7 +33,7 @@ export const business = {
       short: "Glovo",
       url: "https://glovoapp.com/es/es/alcala-de-henares-y-torrejon-de-ardoz/stores/ranxo-king-smash-burger-alcala-de-henares-y-torrejon-de-ardoz",
       description: "Elige lo que te apetece en Glovo.",
-      color: "#d7192b",
+      color: "#ffc244",
     },
   ],
 } as const;
